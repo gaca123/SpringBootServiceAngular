@@ -47,13 +47,13 @@ public class Player implements Comparable<Player> {
     private Double weight;
     @Attributes(description = "Team", title = "Team", required = true, maxItems = 1)
     private Team team;
-    
-    public int getIdPlayer() {
+
+    public int getAidPlayer() {
         return aidPlayer;
     }
 
-    public void setIdPlayer(int aidPlayer) {
-        this.aidPlayer =aidPlayer;
+    public void setAidPlayer(int aidPlayer) {
+        this.aidPlayer = aidPlayer;
     }
 
     public String getName() {
