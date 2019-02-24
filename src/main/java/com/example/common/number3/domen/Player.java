@@ -34,7 +34,7 @@ import java.util.Objects;
 public class Player implements Comparable<Player> {
 
     @Attributes(title = "Id player", maximum = 100, minimum = 0, exclusiveMaximum = false, exclusiveMinimum = false, description = "Insert id of player", maxLength = 3, minLength = 0, readonly = true, pattern = "^[0-9]+", required = true)
-    private int idPlayer;
+    private int aidPlayer;
     @Attributes(required = true, title = "Name", description = "Insert name of player", readonly = false, maxLength = 20, minLength = 2, pattern = "^[a-zA-Z]+")
     private String name;
     @Attributes(required = true, title = "Surname", description = "Insert surname of player", readonly = false, maxLength = 20, minLength = 2, pattern = "^[a-zA-Z]+")
@@ -49,11 +49,11 @@ public class Player implements Comparable<Player> {
     private Team team;
     
     public int getIdPlayer() {
-        return idPlayer;
+        return aidPlayer;
     }
 
-    public void setIdPlayer(int idPlayer) {
-        this.idPlayer = idPlayer;
+    public void setIdPlayer(int aidPlayer) {
+        this.aidPlayer =aidPlayer;
     }
 
     public String getName() {
@@ -98,13 +98,13 @@ public class Player implements Comparable<Player> {
 
     @Override
     public String toString() {
-        return "{" + "idPlayer=" + idPlayer + ", name=" + name + ", surname=" + surname + ", dateOfBirth=" + dateOfBirth + ", height=" + height + ", weight=" + weight + ", team=" + team + '}';
+        return "{" + "idPlayer=" + aidPlayer + ", name=" + name + ", surname=" + surname + ", dateOfBirth=" + dateOfBirth + ", height=" + height + ", weight=" + weight + ", team=" + team + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 67 * hash + this.idPlayer;
+        hash = 67 * hash + this.aidPlayer;
         hash = 67 * hash + Objects.hashCode(this.name);
         hash = 67 * hash + Objects.hashCode(this.surname);
         hash = 67 * hash + Objects.hashCode(this.dateOfBirth);
@@ -126,7 +126,7 @@ public class Player implements Comparable<Player> {
             return false;
         }
         final Player other = (Player) obj;
-        if (this.idPlayer != other.idPlayer) {
+        if (this.aidPlayer != other.aidPlayer) {
             return false;
         }
         if (!Objects.equals(this.name, other.name)) {
